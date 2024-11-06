@@ -1,24 +1,43 @@
 package test;
 
-
-public class B {
+public final class B {
 	
-		   public static void main(String[] args) {
-		        long number = 123456789;
-		        StringBuilder formatted = new StringBuilder(String.valueOf(number));
+	
+	private final int id;
+	
+	private final String name;
 
-		        // Insert commas based on the desired format
-		        if (formatted.length() > 5) {
-		            formatted.insert(formatted.length() - 3, ',');
-		            formatted.insert(formatted.length() - 6, ',');
-		            if (formatted.length() > 8) {
-		                formatted.insert(formatted.length() - 9, ',');
-		            }
-		        }
+	public B(int id, String name) {
+		super();
+		this.id = id;
+		this.name = name;
+	}
 
-		        System.out.println(formatted.toString());
-		    }
+	public int getId() {
+		return id;
+	}
+
+	public String getName() {
+		return name;
+	}
+	
+	
+	public static void main(String[] args) {
+		 B b1= new B(1,"shekhar");
 		 
-	    
+		 System.out.println(b1.getId());
+		 System.out.println(b1.getName());
+		 
+		 System.out.println(b1);
+	}
+	
+	
+	
+	
+	
+	
+
+	
+	
 
 }
